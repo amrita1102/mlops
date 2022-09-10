@@ -20,5 +20,12 @@ def predict():
     print(output)
     return jsonify(output[0])
 
+@app.route('/pred',methods=['POST'])
+def pred():
+    data = [float(i) for i in request.form.values()]
+    output = model.predict([data])
+    print([data])
+    return render_template('home.html',res='Output is {}'.format(output))
+
 if __name__=='__main__':
     app.run(debug=True)

@@ -1,3 +1,8 @@
 <h1>
-    Hello World
+    Model output
 </h1>
+<form action="{{ url_for('pred')}}" method="post">
+    <input type="text" name="INP" placeholder="INP" required="required"/>
+    <button type="submit">Predict</button>
+</form>
+{{res}}
