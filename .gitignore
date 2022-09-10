@@ -1,5 +1,5 @@
-./Include
-./Lib
-./Scripts
-./share
+Include/
+Lib/
+Scripts/
+share/
 pyvenv.cfg
